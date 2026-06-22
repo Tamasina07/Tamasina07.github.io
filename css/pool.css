@@ -14,11 +14,12 @@ html .navg {
 
 .oldquicklinks td {
     padding: 3px;
+    text-align: center;
 }
 
 .oldquicklinks p, .oldquicklinks a {
     color: white;
-    margin: 0px;
+    margin: 0px auto;
     text-decoration: none;
 }
 
