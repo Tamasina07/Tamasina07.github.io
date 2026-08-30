@@ -94,26 +94,26 @@ function initEffects() {
         }
         if (naviGAYtionbar && musicDir) {
             var sfx_select = createAudio("sfx_select",musicDir+"select.mp3");
-            var sfx_back = createAudio("sfx_leavesite",musicDir+"leavesite.mp3");
+            var sfx_leavesite = createAudio("sfx_leavesite",musicDir+"leavesite.mp3");
             var sfx_soundon = createAudio("sfx_soundon",musicDir+"soundon.mp3");
             var sfx_hover = createAudio("sfx_hover",musicDir+"hover.mp3");
             if (naviGAYtionbar) {
                 addSoundsToButtons(naviGAYtionbar,sfx_hover,false);
             }
-            //if (feeter) {
-            //    addSoundsToButtons(feeter.querySelector('p'),sfx_hover,false);
-            //}
+            if (feeter) {
+                addSoundsToButtons(feeter,sfx_hover,true);
+            }
             var soundControl = document.createElement('img');
             soundControl.id = "soundControl";
-            if (localStorage.getItem("soundEnabled") == "false") {
-                soundControl.className = "off";
-                soundControl.title = "Sound off"
-                soundControl.alt = "Sound off"
-
-            } else {
+            if (localStorage.getItem("soundEnabled") == "true") {
                 soundControl.className = "on";
                 soundControl.title = "Sound on"
                 soundControl.alt = "Sound on"
+
+            } else {
+                soundControl.className = "off";
+                soundControl.title = "Sound off"
+                soundControl.alt = "Sound off"
             }
             try {
                 soundControl.onclick = function() {toggleSound(soundControl);playSoundEffect('sfx_soundon');playSoundEffect('sfx_select')};
@@ -164,7 +164,7 @@ function addSoundsToButtons(parent,hovers,alt) {
         // Selection sounds. Fuck this code.
         try {
             if (alt) {
-                btn.onclick = function() {playSoundEffect(sfx_back);};
+                btn.onclick = function() {playSoundEffect(sfx_leavesite);};
             } else {
                 btn.onclick = function() {playSoundEffect(sfx_select);};
             }
@@ -172,7 +172,7 @@ function addSoundsToButtons(parent,hovers,alt) {
             if(btn.addEventListener){
                 btn.addEventListener('click', function(){
                     if (alt) {
-                        playSoundEffect(sfx_back);
+                        playSoundEffect(sfx_leavesite);
                     } else {
                         playSoundEffect(sfx_select);
                     }
@@ -180,7 +180,7 @@ function addSoundsToButtons(parent,hovers,alt) {
             } else if(btn.attachEvent){
                 btn.attachEvent('onclick', function(){
                     if (alt) {
-                        playSoundEffect(sfx_back);
+                        playSoundEffect(sfx_leavesite);
                     } else {
                         playSoundEffect(sfx_select);
                     }
@@ -209,7 +209,7 @@ function addSoundsToButtons(parent,hovers,alt) {
 }
 
 function playSoundEffect(sound) {
-    if (localStorage.getItem("soundEnabled") == "true" || localStorage.getItem("soundEnabled") == null) {
+    if (localStorage.getItem("soundEnabled") == "true") {
         if (typeof sound === 'string' || sound instanceof String) {
             var snd = document.getElementById(sound)
             if (snd) {
@@ -254,16 +254,11 @@ function toggleSound(soundControl) {
             soundControl.className = "off";
             soundControl.title = "Sound off";
             localStorage.setItem("soundEnabled", false);
-        } else if (localStorage.getItem("soundEnabled") == "false") {
+        } else {
             soundControl.title = "Sound on";
             soundControl.alt = "Sound on";
             soundControl.className = "on";
             localStorage.setItem("soundEnabled", true);
-        } else {
-            soundControl.alt = "Sound off"
-            soundControl.className = "off";
-            soundControl.title = "Sound off"
-            localStorage.setItem("soundEnabled", false);
         }
     }
 }
