@@ -170,6 +170,10 @@ tr.contain a img {
     border-collapse: collapse;
 }
 
+.navg .aytionbar td img {
+    display: block;
+}
+
 .main {
     background-color: #f6f6f6;
     background-image: url('tile.gif');
@@ -209,14 +213,14 @@ tr.contain a img {
     overflow: hidden;
 }
 
-hr {
+hr, .commstable .pricerow hr {
     height: 1px;
     border: 0px;
     background-image: url('divider.png');
     margin-bottom: 15px;
 }
 
-.blog hr {
+.blog hr, .commstable hr {
     height: 1px;
     border: 0px;
     background-image: url('divider_grey.png');
