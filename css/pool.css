@@ -434,7 +434,7 @@ special {
 #musicControl {
     content: url('musicoff.png');
     position: relative;
-    top: -116px;
+    top: -110px;
 }
 
 #musicControl.paused {
@@ -447,7 +447,7 @@ special {
 
 #soundControl {
     content: url('soundoff.png');
-    top: -40px;
+    top: -32px;
 }
 
 #soundControl.off {
