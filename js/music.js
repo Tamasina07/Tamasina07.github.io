@@ -116,7 +116,7 @@ function initEffects() {
                 soundControl.alt = "Sound off"
             }
             try {
-                soundControl.onclick = function() {toggleSound(soundControl);playSoundEffect('sfx_soundon');playSoundEffect('sfx_select')};
+                soundControl.onclick = function() {toggleSound(soundControl);playSoundEffect('sfx_soundon');};
             } catch {
                 if(soundControl.addEventListener){
                     soundControl.addEventListener('click', function(){
