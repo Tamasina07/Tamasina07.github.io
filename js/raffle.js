@@ -34,7 +34,7 @@ function instantwin() {
 var randval = -7
 function randompick() {
     var num = document.getElementById('num');
-    randval = Math.floor(Math.random() * 100);
+    randval = Math.floor(Math.random() * 10);
     num.innerHTML = randval;
 }
 
