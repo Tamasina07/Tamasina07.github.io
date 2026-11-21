@@ -28,13 +28,13 @@ function instantwin() {
 
 // okay thats enough fooling around heres the random
 // raffle picker. its not special or anything i copied
-// code from w3schools lol anyways it picks between 0-9
+// code from w3schools lol anyways it picks between 0-4
 // and thats it. not very special.
 
 var randval = -7
 function randompick() {
     var num = document.getElementById('num');
-    randval = Math.floor(Math.random() * 10);
+    randval = Math.floor(Math.random() * 5);
     num.innerHTML = randval;
 }
 
@@ -68,8 +68,8 @@ if(window.addEventListener){
 
 // so that was the raffle code. whoop de doooooo..
 // look at you reading this. youre a fair bit nosy aint ya?
-// so... here's your reward for being so nozy:
+// so... here's your reward for being so nosy:
 //
-// the answer you're seeking may or may not be buried here.
+// the answer you're seeking is buried here.
 // poke around this file and you may be rewarded with the
-// thing you desire.
+// thing you desire, if you find the correct thing.
