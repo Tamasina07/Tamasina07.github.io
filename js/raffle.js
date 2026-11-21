@@ -28,7 +28,7 @@ function instantwin() {
 
 // okay thats enough fooling around heres the random
 // raffle picker. its not special or anything i copied
-// code from w3schools lol anyways it picks between 0-99
+// code from w3schools lol anyways it picks between 0-9
 // and thats it. not very special.
 
 var randval = -7
