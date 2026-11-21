@@ -560,6 +560,55 @@ a.kofi-button:active {
     text-decoration: none;
 }
 
+button {
+    border: #951587 2px solid;
+    border-radius: 2px;
+    color: white;
+    background: #ff81f2;
+    background: -webkit-linear-gradient(180deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    background: -moz-linear-gradient(180deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    background: linear-gradient(180deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#FF81F2",
+        endColorstr="#BF17BC",
+        GradientType=0
+    );
+}
+
+button:hover {
+    border: #951587 2px solid;
+    border-radius: 2px;
+    color: grey;
+    background: #ffa4f6;
+    background: -webkit-linear-gradient(180deg,rgb(255, 225, 252) 0%, rgb(254, 158, 253) 49%, rgb(255, 128, 253) 50%, rgb(222, 41, 218) 100%);
+    background: -moz-linear-gradient(180deg,rgb(255, 225, 252) 0%, rgb(254, 158, 253) 49%, rgb(255, 128, 253) 50%, rgb(222, 41, 218) 100%);
+    background: linear-gradient(180deg,rgb(255, 225, 252) 0%, rgb(254, 158, 253) 49%, rgb(255, 128, 253) 50%, rgb(222, 41, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#FFA4F6",
+        endColorstr="#BF17BC",
+        GradientType=0
+    );
+}
+
+button:active {
+    background: #BF17BC;
+    background: -webkit-linear-gradient(0deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    background: -moz-linear-gradient(0deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    background: linear-gradient(0deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#BF17BC",
+        endColorstr="#FF81F2",
+        GradientType=0
+    );
+}
+
+button>span {
+    padding: 0px !important;
+    text-shadow: 1px 1px 0px #000000c4;
+    color: white;
+    display: table;
+}
+
 @keyframes kofi-wiggle {
     0% {
         transform:rotate(0) scale(1)
