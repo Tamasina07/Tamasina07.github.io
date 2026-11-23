@@ -534,13 +534,10 @@ span.kofitext {
 }
 a.kofi-button {
     min-width:120px;
-    background-color:#d585ba;
     display: block;
     padding:2px 5px;
     text-align:center;
-    color:#fff;
     vertical-align:middle;
-    border:2px solid #fff;
     text-decoration:none;
     text-shadow:none;
     font-weight:700;
@@ -550,17 +547,8 @@ a.kofi-button:visited {
     color:#fff;
     text-decoration: none;
 }
-a.kofi-button:hover {
-    color:#f5f5f5;
-    background-color:#ff4cc3;
-    text-decoration: none;
-}
-a.kofi-button:active {
-    color:#f5f5f5;
-    text-decoration: none;
-}
 
-button {
+button, a.kofi-button {
     border: #951587 2px solid;
     border-radius: 2px;
     color: white;
@@ -575,7 +563,7 @@ button {
     );
 }
 
-button:hover {
+button:hover, a.kofi-button:hover {
     border: #951587 2px solid;
     border-radius: 2px;
     color: grey;
@@ -590,7 +578,7 @@ button:hover {
     );
 }
 
-button:active {
+button:active, a.kofi-button:active {
     background: #BF17BC;
     background: -webkit-linear-gradient(0deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
     background: -moz-linear-gradient(0deg,rgba(255, 179, 247, 1) 0%, rgba(255, 107, 253, 1) 49%, rgba(255, 79, 252, 1) 50%, rgba(191, 23, 188, 1) 100%);
