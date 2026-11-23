@@ -41,7 +41,7 @@ html.error body {
 }
 
 html.error .main {
-    background-color: transparent;
+    background-color: black;
     background-color: #0000005f;
     background-image: none;
     border: dashed 5px yellow;
@@ -139,8 +139,8 @@ tr.contain a img {
     background-image: url('shadow.png');
     background-repeat: repeat-y;
     background-position: top center;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='shadow.png', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='shadow.png', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', src='shadow.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', src='shadow.png', sizingMethod='scale')";
 }
 
 .navg, .main, .foot {
