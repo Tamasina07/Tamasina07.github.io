@@ -28,7 +28,7 @@ function initMusic() {
             musicControl.alt = "Music off"
             try {
                 musicControl.onclick = function() {toggleMusic(musicPlayer,musicControl); playSoundEffect('sfx_select')};
-            } catch {
+            } catch (err) {
                 if(musicControl.addEventListener){
                     musicControl.addEventListener('click', function(){
                         toggleMusic(musicPlayer,musicControl);
@@ -45,7 +45,7 @@ function initMusic() {
             }
             try {
                 musicControl.onmouseover = function() {playSoundEffect(sfx_hover);};
-            } catch {
+            } catch (err) {
                 if(musicControl.addEventListener){
                     soundControl.addEventListener('mouseover', function(){
                         playSoundEffect(sfx_hover);
@@ -117,7 +117,7 @@ function initEffects() {
             }
             try {
                 soundControl.onclick = function() {toggleSound(soundControl);playSoundEffect('sfx_soundon');};
-            } catch {
+            } catch (err) {
                 if(soundControl.addEventListener){
                     soundControl.addEventListener('click', function(){
                         toggleSound(soundControl);
@@ -134,7 +134,7 @@ function initEffects() {
             }
             try {
                 soundControl.onmouseover = function() {playSoundEffect(sfx_hover);};
-            } catch {
+            } catch (err) {
                 if(soundControl.addEventListener){
                     soundControl.addEventListener('mouseover', function(){
                         playSoundEffect(sfx_hover);
@@ -168,7 +168,7 @@ function addSoundsToButtons(parent,hovers,alt) {
             } else {
                 btn.onclick = function() {playSoundEffect(sfx_select);};
             }
-        } catch {
+        } catch (err) {
             if(btn.addEventListener){
                 btn.addEventListener('click', function(){
                     if (alt) {
@@ -192,7 +192,7 @@ function addSoundsToButtons(parent,hovers,alt) {
         // Hover sounds. Fuck this code even more.
         try {
             btn.onmouseover = function() {playSoundEffect(sfx_hover);};
-        } catch {
+        } catch (err) {
             if(btn.addEventListener){
                 btn.addEventListener('mouseover', function(){
                     playSoundEffect(sfx_hover);
