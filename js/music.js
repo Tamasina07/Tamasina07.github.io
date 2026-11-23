@@ -153,7 +153,7 @@ function initEffects() {
 }
 
 function addSoundsToButtons(parent,hovers,alt) {
-    for (let i = 0; i < parent.children.length; i++) {
+    for (var i = 0; i < parent.children.length; i++) {
         if (parent.children[i].querySelector('a')) {
             var btn = parent.children[i].children[0];
         } else if (parent.tagName == "P") {
